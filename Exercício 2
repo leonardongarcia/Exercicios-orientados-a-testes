@@ -1,0 +1,23 @@
+/******************************************************************************
+
+2. Faça um algoritmo para calcular quantas ferraduras são necessárias para equipar todos os
+cavalos comprados para um haras. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int calcularFerraduras (int cavalosComprados, int ferradPorCavalo) {
+    int totFerrad = cavalosComprados * ferradPorCavalo;
+    
+    return totFerrad;
+}
+
+int main()
+{
+    printf("%d\n", calcularFerraduras (1, 4) == 4);
+    printf("%d\n", calcularFerraduras (5, 4) == 20);
+    printf("%d\n", calcularFerraduras (12, 4) == 48);
+    printf("%d\n", calcularFerraduras (17, 4) == 68);
+    
+    return 0;
+}
