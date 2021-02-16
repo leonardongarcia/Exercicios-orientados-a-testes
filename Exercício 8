@@ -1,0 +1,33 @@
+/******************************************************************************
+
+8. Faça um algoritmo para ler três notas de um aluno em uma disciplina e imprimir a sua média
+ponderada (as notas tem pesos respectivos de 1, 2 e 3). 
+
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularMediaDasNotas(float nota1, float nota2, float nota3) {
+    
+    float media = ((nota1) + (nota2 * 2) + (nota3 * 3)) / 6;
+    
+      
+        return media;
+      
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularMediaDasNotas(5.0f, 8.0f, 3.0f), 5.0f));
+    printf("%d\n", floatcmp(calcularMediaDasNotas(10.0f, 10.0f, 10.0f), 10.0f));
+    printf("%d\n", floatcmp(calcularMediaDasNotas(10.0f, 5.0f, 10.0f), 8.33f));
+    printf("%d\n", floatcmp(calcularMediaDasNotas(7.0f, 3.0f, 8.0f), 6.16f));
+    printf("%d\n", floatcmp(calcularMediaDasNotas(3.0f, 6.0f, 9.0f), 7.0f));
+    
+    return 0;
+}
