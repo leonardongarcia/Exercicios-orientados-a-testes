@@ -1,0 +1,30 @@
+/******************************************************************************
+
+7. Entrar com o dia e o mês de uma data e informar quantos dias se passaram desde o início do
+ano. Esqueça a questão dos anos bissextos e considere sempre que um mês possui 30 dias.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+int calcularTotalDias(int dia, int mes) {
+    
+        int totalDias =  (30 * mes) - (30 - dia);
+    
+    return totalDias;
+}
+
+int main() {
+    
+    printf("%d\n", calcularTotalDias(01, 01) == 01);
+    printf("%d\n", calcularTotalDias(13, 03) == 73);
+    printf("%d\n", calcularTotalDias(25, 12) == 355);
+    printf("%d\n", calcularTotalDias(12, 10) == 282);
+    printf("%d\n", calcularTotalDias(30, 12) == 360);
+    
+    return 0;
+}
