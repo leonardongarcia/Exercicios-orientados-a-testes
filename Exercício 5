@@ -1,0 +1,30 @@
+/******************************************************************************
+
+5. Um motorista deseja colocar no seu tanque X reais de gasolina. Escreva um algoritmo para ler o
+preço do litro da gasolina e o valor do pagamento, e exibir quantos litros ele conseguiu colocar no
+tanque. 
+
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularTotalLitros(float valorPgto, float valorLitro) {
+    
+    float totalLitros = valorPgto / valorLitro;
+    
+    return totalLitros;
+}
+int main() {
+   
+    printf("%d\n", floatcmp(calcularTotalLitros(98.5f, 5.1f), 19.31f));
+    printf("%d\n", floatcmp(calcularTotalLitros(200.0f, 5.1f), 39.21f));
+    printf("%d\n", floatcmp(calcularTotalLitros(150.03f, 3.09f), 48.55f));
+    printf("%d\n", floatcmp(calcularTotalLitros(178.83f, 3.09f), 57.87f));
+    
+    return 0;
+}
