@@ -11,6 +11,8 @@ informe quanto será o valor arrecadado.
 int calcularValorArrecadado(int peq, int vlrPeq, int med, int vlrMed, int gde, int vlrgde) {
     
     int totalArrecadado = (peq * vlrPeq) + (med * vlrMed) + (gde * vlrgde);
+    
+    return totalArrecadado;
 }
 int main() {
     
