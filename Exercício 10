@@ -1,0 +1,31 @@
+/******************************************************************************
+
+10. Construa um algoritmo para calcular a distância entre dois pontos do plano cartesiano. Cada
+ponto é um par ordenado (x,y). 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+double calcularDistanciaPontos(double x1, double y1, double x2, double y2) {
+    
+    double distanciaAB = sqrt(pow((x2 - x1),2) + pow((y2 - y1),2));
+    
+    return distanciaAB;
+    
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularDistanciaPontos(1.0f, 1.0f, 2.0f, 1.0f), 1.0f));
+    printf("%d\n", floatcmp(calcularDistanciaPontos(3.0f, 2.0f, 3.0f, 4.0f), 2.0f));
+    printf("%d\n", floatcmp(calcularDistanciaPontos(1.0f, 1.0f, 1.0f, 4.0f), 3.0f));
+    printf("%d\n", floatcmp(calcularDistanciaPontos(5.0f, 4.0f, 5.0f, 8.0f), 4.0f));
+    printf("%d\n", floatcmp(calcularDistanciaPontos(5.0f, 2.0f, 10.0f, 2.0f), 5.0f));
+    
+    return 0;
+}
