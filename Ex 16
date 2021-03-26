@@ -1,0 +1,46 @@
+/******************************************************************************
+
+16. A lanchonete Gostosura vende apenas um tipo de sanduíche, cujo recheio inclui duas fatias de
+queijo, uma fatia de presunto e uma rodela de hambúrguer. Sabendo que cada fatia de queijo ou
+presunto pesa 50 gramas, e que a rodela de hambúrguer pesa 100 gramas, faça um algoritmo em
+que o dono forneça a quantidade de sanduíches a fazer, e a máquina informe as quantidades (em
+quilos) de queijo, presunto e carne necessários para compra. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+float calcularQuei (float qtdPao) {
+    
+    float qtdQuei = qtdPao * 0.05f;
+    return qtdQuei;
+}
+
+float calcularPres (float qtdPao) {
+    
+    float qtdPres = qtdPao * 0.05f;
+    return qtdPres;
+}
+
+float calcularHamb (float qtdPao) {
+    
+    float qtdHamb = qtdPao * 0.1f;
+    return qtdHamb;
+}
+
+int main() {
+    
+    printf("%d\n", calcularQuei (10) == 0.5f);
+    printf("%d\n", calcularPres (10) == 0.5f);
+    printf("%d\n", calcularHamb (10) == 1.0f);
+    printf("\n");
+    printf("%d\n", calcularQuei (1054) == 52.70f);
+    printf("%d\n", calcularPres (1054) == 52.70f);
+    printf("%d\n", calcularHamb (1054) == 105.4f);
+    printf("\n");
+    printf("%d\n", calcularQuei (10521) == 526.05f);
+    printf("%d\n", calcularPres (10521) == 526.05f);
+    printf("%d\n", calcularHamb (10521) == 1052.1f);
+    return 0;
+}
+
+
