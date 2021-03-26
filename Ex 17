@@ -1,0 +1,22 @@
+17. Alguns países medem temperaturas em graus Celsius, e outros em graus Fahrenheit. Faça um
+algoritmo para ler uma temperatura Celsius e imprimi-Ia em Fahrenheit (pesquise como fazer este
+tipo de conversão). 
+
+*******************************************************************************/
+#include <stdio.h>
+
+float converterCelsiusEmFahrenheit(float celsius) {
+    
+    float fahrenheit = (celsius * 9/5) + 32;
+    return  fahrenheit;
+}
+
+int main() {
+    
+    printf("%d\n", converterCelsiusEmFahrenheit(100.0f) == 212.0f);
+    printf("%d\n", converterCelsiusEmFahrenheit(38.5f) == 101.3f);
+    printf("%d\n", converterCelsiusEmFahrenheit(25.0f) == 77.0f);
+    printf("%d\n", converterCelsiusEmFahrenheit(-10.5f) == 13.1f);
+
+    return 0;
+}
