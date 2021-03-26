@@ -1,0 +1,60 @@
+/******************************************************************************
+
+15. Três amigos, Carlos, André e Felipe. decidiram rachar igualmente a conta de um bar. Faça um
+algoritmo para ler o valor total da conta e imprimir quanto cada um deve pagar, mas faça com que
+Carlos e André não paguem centavos. Ex: uma conta de R$101,53 resulta em R$33,00 para
+Carlos, R$33,00 para André e R$35,53 para Felipe. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularCarlos (float totalConta) {
+    
+    float carlos = totalConta / 3;
+    int parteCarlos = carlos;
+  
+    
+    return parteCarlos;
+}
+
+float calcularAndre (float totalConta) {
+    
+    float andre = totalConta / 3;
+    int parteAndre = andre;
+    
+    return parteAndre;
+}
+
+float calcularFelipe (float totalConta) {
+    
+    float felipe = totalConta / 3;
+    int total1 = felipe;
+    int total2 = total1 * 2;
+    float parteFelipe = totalConta - total2;
+   
+    return parteFelipe;
+}
+
+int main() {
+    
+    printf("%i\n", calcularCarlos(101.53) == 33 );
+    printf("%i\n", calcularAndre(101.53) == 33 );
+    printf("%d\n", floatcmp(calcularFelipe(101.53), 35.53));
+    printf("\n");
+    printf("%i\n", calcularCarlos(251.34) == 83 );
+    printf("%i\n", calcularAndre(251.34) == 83 );
+    printf("%d\n", floatcmp(calcularFelipe(251.34), 85.34));
+    printf("\n");
+    printf("%i\n", calcularCarlos(1057.31) == 352 );
+    printf("%i\n", calcularAndre(1057.31) == 352 );
+    printf("%d\n", floatcmp(calcularFelipe(1057.31), 353.31));
+    
+    return 0;
+}
+
+
