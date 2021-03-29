@@ -1,0 +1,28 @@
+/******************************************************************************
+
+27. Faça um algoritmo que receba dois números, calcule e mostre a divisão do primeiro número
+pelo segundo. Sabe-se que o segundo número não pode ser zero, portanto não é necessário se
+preocupar com validações. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float dividirNumeros(float dividendo, float divisor) {
+    
+    float res = dividendo / divisor;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(dividirNumeros(15, 3), 5));
+    printf("%d\n", floatcmp(dividirNumeros(27.57f, 3.53f), 7.81f));
+    printf("%d\n", floatcmp(dividirNumeros(167.64f, 57.69f), 2.90f));
+    printf("%d\n", floatcmp(dividirNumeros(15673.59f, 35.98f), 435.62f));
+
+    return 0;
+}
