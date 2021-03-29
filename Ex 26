@@ -1,0 +1,27 @@
+/******************************************************************************
+
+26. Faça um algoritmo que receba três números, calcule e mostre a multiplicação desses números.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float multiplicarNumeros (float num1, float num2, float num3) {
+    
+    float res = num1 * num2 * num3;
+    return res;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(multiplicarNumeros(1, 2, 3), 6));
+    printf("%d\n", floatcmp(multiplicarNumeros(95, 26, 37), 91390));
+    printf("%d\n", floatcmp(multiplicarNumeros(6.7f, 95.1, 332.6), 211922.74f));
+    printf("%d\n", floatcmp(multiplicarNumeros(-65.2, 26.7, 36.4), -63366.57f));
+
+    return 0;
+}
