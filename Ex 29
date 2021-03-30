@@ -14,6 +14,7 @@ int floatcmp(float a, float b){
 float calcularDesconto(float precoProd) {
     
     float res = precoProd * 0.9f;
+    return res;
 }
 
 int main() {
