@@ -1,0 +1,42 @@
+/******************************************************************************
+
+30. Um funcionário recebe um salário fixo mais 4% de comissão sobre as vendas. Faça um
+algoritmo que receba o salário fixo de um funcionário e o valor de suas vendas, calcule e mostre a
+comissão e o salário final do funcionário. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularComissao (float salFixo, float vendas) {
+    
+    float comissao = vendas * 0.04f;
+    return comissao;
+}
+
+float calcularSalFinal (float salFixo, float vendas) {
+    
+    float salFinal = salFixo + (vendas * 0.04f);
+    return salFinal;
+}
+int main() {
+    
+    printf("%d\n", floatcmp(calcularComissao(1547.94f, 25764.31f), 1030.57f));
+    printf("%d\n", floatcmp(calcularSalFinal(1547.94f, 25764.31f), 2578.51f));
+    printf("\n");
+    printf("%d\n", floatcmp(calcularComissao(2564.98f, 100598.14f), 4023.92f));
+    printf("%d\n", floatcmp(calcularSalFinal(2564.98f, 100598.14f), 6588.90f));
+    printf("\n");
+    printf("%d\n", floatcmp(calcularComissao(3951.89f, 259768.73f), 10390.74f));
+    printf("%d\n", floatcmp(calcularSalFinal(3951.89f, 259768.73f), 14342.63f));
+    printf("\n");
+    printf("%d\n", floatcmp(calcularComissao(1743.75f, 10967843.73f), 438713.74f));
+    printf("%d\n", floatcmp(calcularSalFinal(1743.75f, 10967843.73f), 440457.49f));
+    printf("\n");
+    
+    return 0;
+}
