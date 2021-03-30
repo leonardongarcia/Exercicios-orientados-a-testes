@@ -15,6 +15,7 @@ int floatcmp(float a, float b){
 float dividirNumeros(float dividendo, float divisor) {
     
     float res = dividendo / divisor;
+    return res;
 }
 
 int main() {
