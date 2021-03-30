@@ -1,0 +1,27 @@
+/******************************************************************************
+
+29. Faça um algoritmo que receba o preço de um produto, calcule e mostre o novo preço,
+sabendo-se que este sofreu um desconto de 10%. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularDesconto(float precoProd) {
+    
+    float res = precoProd * 0.9f;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularDesconto(100), 90));
+    printf("%d\n", floatcmp(calcularDesconto(1587.54f), 1428.78f));
+    printf("%d\n", floatcmp(calcularDesconto(2697.69f), 2427.92f));
+    printf("%d\n", floatcmp(calcularDesconto(193.57f), 174.21f));
+
+    return 0;
+}
