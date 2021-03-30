@@ -1,0 +1,27 @@
+/******************************************************************************
+
+28. Faça um algoritmo que receba duas notas, calcule e mostre a média ponderada dessas notas,
+considerando peso 2 para a primeira nota e peso 3 para a segunda nota. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularMediaPond (float nota1, float nota2) {
+    
+    float mediaPond = ((nota1 * 2) + (nota2 * 3)) / (2 + 3);
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularMediaPond(10, 10), 10));
+    printf("%d\n", floatcmp(calcularMediaPond(7.5f, 3.8f), 5.28f));
+    printf("%d\n", floatcmp(calcularMediaPond(3.91f, 9.67f), 7.36f));
+    printf("%d\n", floatcmp(calcularMediaPond(9.57f, 8.84f), 9.13f));
+
+    return 0;
+}
