@@ -8,37 +8,37 @@ UNIDADE = x
 *******************************************************************************/
 #include <stdio.h>
 
-int calcularCen (int num) {
+int calcularCentena (int num) {
     
-    int cen = (num / 100) * 100;
-    return cen;
+    int centena = (num / 100) * 100;
+    return centena;
 }
 
-int calcularDez (int num) {
+int calcularDezena (int num) {
     
-    int dez = (num / 100) * 10;
-    return dez;
+    int dezena = (num / 100) * 10;
+    return dezena;
 }
 
-int calcularUnid (int num) {
+int calcularUnidade (int num) {
     
-    int unid = (num / 100);
-    return unid;
+    int unidade = (num / 100);
+    return unidade;
 }
 
 int main(){
     
-    printf("%i\n", calcularCen(851) == 800);
-    printf("%i\n", calcularDez(851) == 80);
-    printf("%i\n", calcularUnid(851) == 8);
+    printf("%i\n", calcularCentena(851) == 800);
+    printf("%i\n", calcularDezena(851) == 80);
+    printf("%i\n", calcularUnidade(851) == 8);
     printf("\n");
-    printf("%i\n", calcularCen(795) == 700);
-    printf("%i\n", calcularDez(795) == 70);
-    printf("%i\n", calcularUnid(795) == 7);
+    printf("%i\n", calcularCentena(795) == 700);
+    printf("%i\n", calcularDezena(795) == 70);
+    printf("%i\n", calcularUnidade(795) == 7);
     printf("\n");
-    printf("%i\n", calcularCen(329) == 300);
-    printf("%i\n", calcularDez(329) == 30);
-    printf("%i\n", calcularUnid(329) == 3);
+    printf("%i\n", calcularCentena(329) == 300);
+    printf("%i\n", calcularDezena(329) == 30);
+    printf("%i\n", calcularUnidade(329) == 3);
     
     return 0;
 }
