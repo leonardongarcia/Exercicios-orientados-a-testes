@@ -13,22 +13,16 @@ int floatcmp(float a, float b){
     return fabs(a - b) < 0.009f;
 }
 
-float calcularCarlos (float totalConta) {
+float calcularCarlosEAndre (float totalConta) {
     
-    float carlos = totalConta / 3;
-    int parteCarlos = carlos;
+    float carlosEAndre = totalConta / 3;
+    int parteCarlosEAndre = carlosEAndre;
   
     
-    return parteCarlos;
+    return parteCarlosEAndre;
 }
 
-float calcularAndre (float totalConta) {
-    
-    float andre = totalConta / 3;
-    int parteAndre = andre;
-    
-    return parteAndre;
-}
+
 
 float calcularFelipe (float totalConta) {
     
@@ -42,19 +36,14 @@ float calcularFelipe (float totalConta) {
 
 int main() {
     
-    printf("%i\n", calcularCarlos(101.53) == 33 );
-    printf("%i\n", calcularAndre(101.53) == 33 );
+    printf("%i\n", calcularCarlosEAndre(101.53) == 33 );
     printf("%d\n", floatcmp(calcularFelipe(101.53), 35.53));
     printf("\n");
-    printf("%i\n", calcularCarlos(251.34) == 83 );
-    printf("%i\n", calcularAndre(251.34) == 83 );
+    printf("%i\n", calcularCarlosEAndre(251.34) == 83 );
     printf("%d\n", floatcmp(calcularFelipe(251.34), 85.34));
     printf("\n");
-    printf("%i\n", calcularCarlos(1057.31) == 352 );
-    printf("%i\n", calcularAndre(1057.31) == 352 );
+    printf("%i\n", calcularCarlosEAndre(1057.31) == 352 );
     printf("%d\n", floatcmp(calcularFelipe(1057.31), 353.31));
     
     return 0;
 }
-
-
