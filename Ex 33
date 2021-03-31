@@ -1,0 +1,22 @@
+/******************************************************************************
+
+33. Faça um algoritmo que calcule e mostre a área de um trapézio. Sabe-se que: A = (base maior +
+base menor)* altura)/2 ;
+
+*******************************************************************************/
+#include <stdio.h>
+
+float calcularAreaTrapezio(float baseMaior, float baseMenor, float altura) {
+    
+    float areaTrapezio = ((baseMaior + baseMenor) * altura) / 2;
+    return areaTrapezio;
+}
+
+int main() {
+    
+    printf("%d\n", calcularAreaTrapezio(10, 5, 2) == 15);
+    printf("%d\n", calcularAreaTrapezio(5, 3, 3) == 12);
+    printf("%d\n", calcularAreaTrapezio(10, 5, 7) == 52.5f);
+    printf("%d\n", calcularAreaTrapezio(25, 12, 5) == 92.5f);
+    return 0;
+}
