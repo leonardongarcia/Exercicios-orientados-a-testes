@@ -1,0 +1,28 @@
+/******************************************************************************
+
+34. Faça um algoritmo que calcule e mostre a área de um quadrado.
+Sabe-se que: A = lado * lado; 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+
+float calcularAreaQuadrado (float lado1, float lado2) {
+    
+    float areaQuadrado = lado1 * lado2;
+}
+
+int main()
+{
+    printf("%d\n", floatcmp(calcularAreaQuadrado (10, 10), 100));
+    printf("%d\n", floatcmp(calcularAreaQuadrado (15.5f, 15.5), 240.25f));
+    printf("%d\n", floatcmp(calcularAreaQuadrado (20.87, 20.87), 435.55f));
+    printf("%d\n", floatcmp(calcularAreaQuadrado (53.7f, 53.7f), 2883.69f));
+
+    return 0;
+}
