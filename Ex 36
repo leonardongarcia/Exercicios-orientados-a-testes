@@ -1,0 +1,27 @@
+/******************************************************************************
+
+36. Faça um algoritmo que receba o valor do salário mínimo e o valor do salário de um funcionário,
+calcule e mostre a quantidade de salários mínimos que ganha esse funcionário. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularQuantosMinimos (float salarioMinimo, float salarioFuncionario) {
+    
+    float quantosMinimos = salarioFuncionario / salarioMinimo;
+    return quantosMinimos;
+}
+
+int main() { 
+    
+    printf("%d\n", floatcmp(calcularQuantosMinimos(880, 4867.91f), 5.53f));
+    printf("%d\n", floatcmp(calcularQuantosMinimos(937, 7541.97f), 8.05f));
+    printf("%d\n", floatcmp(calcularQuantosMinimos(954, 3197.14f), 3.35f));
+    printf("%d\n", floatcmp(calcularQuantosMinimos(998, 2741.32f), 2.74f));
+    return 0;
+}
