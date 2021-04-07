@@ -14,6 +14,7 @@ int floatcmp(float a, float b){
 float calcularAreaLosango(float diagonalMaior, float diagonalMenor) {
     
     float areaLosango = (diagonalMaior * diagonalMenor) / 2;
+    return areaLosango;
 }
 
 int main() {
