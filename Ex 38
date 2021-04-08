@@ -1,0 +1,45 @@
+/******************************************************************************
+
+38. Faça um algoritmo que receba o ano de nascimento de uma pessoa e o ano atual, calcule e
+mostre:
+a) a idade dessa pessoa em anos;
+b) a idade dessa pessoa em meses;
+c) a idade dessa pessoa em dias;
+d) a idade dessa pessoa em semanas.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int calcularIdadeEmAnos (int anoNascimento, int anoAtual) {
+    
+    int idadeEmAnos = anoAtual - anoNascimento;
+    return idadeEmAnos;
+}
+
+int calcularIdadeEmMeses (int anoNascimento, int anoAtual) {
+    
+    int idadeEmMeses = calcularIdadeEmAnos(1990, 2021) * 12;
+    return idadeEmMeses;
+}
+
+int calcularIdadeEmDias (int anoNascimento, int anoAtual) {
+    
+    int idadeEmDias = calcularIdadeEmAnos(1990, 2021) * 360;
+    return idadeEmDias;
+}
+
+int calcularIdadeEmSemanas (int anoNascimento, int anoAtual) {
+    
+    int idadeEmSemanas = calcularIdadeEmAnos(1990, 2021) * 52;
+    return idadeEmSemanas;
+}
+
+int main() {
+    
+    printf("%d\n", calcularIdadeEmAnos(1990, 2021) == 31);
+    printf("%d\n", calcularIdadeEmMeses(1990, 2021) == 372);
+    printf("%d\n", calcularIdadeEmDias(1990, 2021) == 11160);
+    printf("%d\n", calcularIdadeEmSemanas(1990, 2021) == 1612);
+
+    return 0;
+}
