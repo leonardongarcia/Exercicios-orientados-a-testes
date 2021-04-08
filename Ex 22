@@ -1,0 +1,32 @@
+/******************************************************************************
+
+22. Pedrinho tem um cofrinho com muitas moedas, e deseja saber quantos reais conseguiu
+poupar. Faça um algoritmo para ler a quantidade de cada tipo de moeda, e imprimir o valor total
+economizado, em reais. Considere que existam moedas de 1, 5, 10, 25 e 50 centavos, e ainda
+moedas de 1 real. Não havendo moeda de um tipo, a quantidade respectiva é zero.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+
+float calcularValorTotal (int cntvs1, int cntvs5, int cntvs10, int cntvs25, int cntvs50, int real1) {
+    
+    float valorTotal = (cntvs1 * 0.01f) + (cntvs5 * 0.05f) + (cntvs10 * 0.1f) + (cntvs25 * 0.25f) + (cntvs50 * 0.5f) + (real1 * 1);
+    return valorTotal;
+    
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularValorTotal (10, 10, 10, 10, 10, 10), 19.10f));
+    printf("%d\n", floatcmp(calcularValorTotal (5, 14, 0, 21, 35, 67), 90.50f));
+    printf("%d\n", floatcmp(calcularValorTotal (12, 29, 37, 57, 6, 52), 74.52f));
+    printf("%d\n", floatcmp(calcularValorTotal (0, 96, 73, 84, 12, 18), 57.10f));
+
+    return 0;
+}

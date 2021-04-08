@@ -1,0 +1,28 @@
+/******************************************************************************
+
+35. Faça um algoritmo que calcule e mostre a área de um losango. Sabe-se que: A =
+(diagonal_maior * diagonal_menor)/2; 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularAreaLosango(float diagonalMaior, float diagonalMenor) {
+    
+    float areaLosango = (diagonalMaior * diagonalMenor) / 2;
+    return areaLosango;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularAreaLosango(2, 1), 1));
+    printf("%d\n", floatcmp(calcularAreaLosango(10, 5), 25));
+    printf("%d\n", floatcmp(calcularAreaLosango(57.59f, 23.71f), 682.73f));
+    printf("%d\n", floatcmp(calcularAreaLosango(104.93f, 17.42f), 913.94f));
+
+    return 0;
+}

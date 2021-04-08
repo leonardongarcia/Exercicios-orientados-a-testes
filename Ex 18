@@ -1,0 +1,37 @@
+/******************************************************************************
+
+18. A empresa Hipotheticus paga R$10,00 por hora normal trabalhada, e R$15,00 por hora extra.
+Faça um algoritmo para calcular e imprimir o salário bruto e o salário líquido de um determinado
+funcionário. Considere que o salário líquido é igual ao salário bruto descontando-se 10% de
+impostos. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+float salarioBruto (float qteHoraNormal, float qtdHoraExtra) {
+    
+    float bruto = (qteHoraNormal * 10) + (qtdHoraExtra * 15);
+    
+    return bruto;
+}
+
+float salarioLiquido (float qtdHoraNormal, float qtdHoraExtra) {
+    
+    float liquido = ((qtdHoraNormal * 10) + (qtdHoraExtra * 15)) * 0.9f;
+}
+
+int main() {
+    
+    printf("%d\n", salarioBruto(10, 10) == 250);
+    printf("%d\n", salarioLiquido(10, 10) == 225);
+    printf("\n");
+    printf("%d\n", salarioBruto(148, 38) == 2050);
+    printf("%d\n", salarioLiquido(148, 38) == 1845);
+    printf("\n");
+    printf("%d\n", salarioBruto(221, 72) == 3290);
+    printf("%d\n", salarioLiquido(221, 72) == 2961);
+    printf("\n");
+    printf("%d\n", salarioBruto(197.5f, 27.5f) == 2387.5f);
+    printf("%d\n", salarioLiquido(197.5f, 27.5f) == 2148.75f);
+    return 0;
+}

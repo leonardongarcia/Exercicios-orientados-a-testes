@@ -1,0 +1,27 @@
+/******************************************************************************
+
+25. Calcule o volume de uma caixa d'água cilíndrica. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularVolume (float raio, float altura) {
+    
+    float volume = M_PI * pow(raio, 2) * altura;
+    return volume;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularVolume(5, 10), 785.4f));
+    printf("%d\n", floatcmp(calcularVolume(3.5f, 15.7f), 604.21f));
+    printf("%d\n", floatcmp(calcularVolume(7.7f, 29.6f), 5513.44f));
+    printf("%d\n", floatcmp(calcularVolume(26.3f, 18.4f), 39983.35f));
+
+    return 0;
+}

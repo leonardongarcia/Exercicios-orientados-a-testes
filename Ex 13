@@ -1,0 +1,46 @@
+/******************************************************************************
+
+13. Ler um número inteiro (assuma até três dígitos) e imprimir a saída da seguinte forma:
+CENTENA = x
+DEZENA = x
+UNIDADE = x
+
+*******************************************************************************/
+#include <stdio.h>
+
+int calcularCentena (int num) {
+    
+    int centena = (num / 100) * 100;
+    return centena;
+}
+
+int calcularDezena (int num) {
+    
+    int dezena = (num / 100) * 10;
+    return dezena;
+}
+
+int calcularUnidade (int num) {
+    
+    int unidade = (num / 100);
+    return unidade;
+}
+
+int main(){
+    
+    printf("%i\n", calcularCentena(851) == 800);
+    printf("%i\n", calcularDezena(851) == 80);
+    printf("%i\n", calcularUnidade(851) == 8);
+    printf("\n");
+    printf("%i\n", calcularCentena(795) == 700);
+    printf("%i\n", calcularDezena(795) == 70);
+    printf("%i\n", calcularUnidade(795) == 7);
+    printf("\n");
+    printf("%i\n", calcularCentena(329) == 300);
+    printf("%i\n", calcularDezena(329) == 30);
+    printf("%i\n", calcularUnidade(329) == 3);
+    
+    return 0;
+}
+
+

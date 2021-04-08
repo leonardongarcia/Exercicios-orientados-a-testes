@@ -1,0 +1,45 @@
+/******************************************************************************
+
+24. Um tonel de refresco é feito com 8 partes de água mineral e 2 partes de suco de maracujá. 
+Faça um algoritmo para calcular quantos litros de água e de suco são necessários para se fazer X 
+litros de refresco (informados pelo usuário). 
+
+*******************************************************************************/
+#include <stdio.h>
+
+float calcularAgua (float refresco) {
+    
+    float agua = refresco * 0.8f;
+    return agua;
+}
+
+float calcularSuco (float refresco) {
+    
+    float suco = refresco * 0.2f;
+    return suco;
+}
+
+int main() {
+    
+    printf("%d\n", calcularAgua(0) == 0);
+    printf("%d\n", calcularSuco(0) == 0);
+    printf("\n");
+    printf("%d\n", calcularAgua(1) == 0.8f);
+    printf("%d\n", calcularSuco(1) == 0.2f);
+    printf("\n");
+    printf("%d\n", calcularAgua(10) == 8);
+    printf("%d\n", calcularSuco(10) == 2);
+    printf("\n");
+    printf("%d\n", calcularAgua(86) == 68.8f);
+    printf("%d\n", calcularSuco(86) == 17.2f);
+    printf("\n");
+    printf("%d\n", calcularAgua(163.5f) == 130.8f);
+    printf("%d\n", calcularSuco(163.5f) == 32.7f);
+    printf("\n");
+    printf("%d\n", calcularAgua(257.3f) == 205.84f);
+    printf("%d\n", calcularSuco(257.3f) == 51.46f);
+    printf("\n");
+    
+    return 0;
+}
+

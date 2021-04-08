@@ -1,0 +1,27 @@
+/******************************************************************************
+
+32. Faça um algoritmo que receba o peso de uma pessoa em quilos, calcule e mostre esse peso
+em gramas. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float converterEmGramas (float pesoEmKg) {
+    
+    float gramas = pesoEmKg * 1000;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(converterEmGramas(1), 1000));
+    printf("%d\n", floatcmp(converterEmGramas(928.56f), 928560));
+    printf("%d\n", floatcmp(converterEmGramas(135.91f), 135910));
+    printf("%d\n", floatcmp(converterEmGramas(0.574f), 574));
+
+    return 0;
+}

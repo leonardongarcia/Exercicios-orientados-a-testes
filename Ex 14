@@ -1,0 +1,27 @@
+/******************************************************************************
+
+14. Calcule a área de uma pizza que possui um raio R (pi=3.14).
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+double calcularArea(double raio) {
+    
+    double area = M_PI * (pow(raio, 2));
+    
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularArea(10), 314.16));
+    printf("%d\n", floatcmp(calcularArea(15), 706.86));
+    printf("%d\n", floatcmp(calcularArea(7), 153.93));
+    printf("%d\n", floatcmp(calcularArea(23), 1661.90));
+    
+    return 0;
+}

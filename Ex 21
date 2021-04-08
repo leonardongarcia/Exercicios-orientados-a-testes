@@ -1,0 +1,25 @@
+/******************************************************************************
+
+21. A fábrica de refrigerantes Meia-Cola vende seu produto em três formatos: lata de 350 ml,
+garrafa de 600 ml e garrafa de 2 litros. Se um comerciante compra uma determinada quantidade
+de cada formato, faça um algoritmo para calcular quantos litros de refrigerante ele comprou.
+
+*******************************************************************************/
+#include <stdio.h>
+
+float calcularTotalDeLitros (int lata350, int garrafa600, int garrafa2) {
+    
+    float totalDeLitros = (lata350 * 0.35f) + (garrafa600 * 0.6f) + (garrafa2 * 2);
+    return totalDeLitros;
+}
+
+int main()
+{
+    printf("%d\n", calcularTotalDeLitros(100, 100, 100) == 295);
+    printf("%d\n", calcularTotalDeLitros(251, 91, 1054) == 2250.45f);
+    printf("%d\n", calcularTotalDeLitros(57, 63, 27) == 111.75f);
+    printf("%d\n", calcularTotalDeLitros(167, 291, 673) == 1579.05f);
+    
+
+    return 0;
+}

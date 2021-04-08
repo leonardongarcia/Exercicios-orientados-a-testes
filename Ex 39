@@ -1,0 +1,29 @@
+/******************************************************************************
+
+39. João recebeu seu salário de R$ 1200,00 e precisa pagar duas contas (C1=R$ 200,00 e
+C2=R$120,00) que estão atrasadas. Como as contas estão atrasadas, João terá de pagar multa de
+2% sobre cada conta. Faça um algoritmo que calcule e mostre quanto restará do salário do João 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularRestoSalario(float salario, float conta1, float conta2) {
+    
+    float restoSalario = salario - ((conta1 * 1.02f) + (conta2 * 1.02f));
+    return restoSalario;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularRestoSalario(1200, 200, 120), 873.60f));
+    printf("%d\n", floatcmp(calcularRestoSalario(2879.75f, 351.27f, 196.34f), 2321.18f));
+    printf("%d\n", floatcmp(calcularRestoSalario(5741.54f, 951.45f, 257.12f), 4508.79f));
+    printf("%d\n", floatcmp(calcularRestoSalario(31274.33f, 5798.94f, 30741.97f), -5997.39f));
+
+    return 0;
+}

@@ -1,0 +1,42 @@
+/******************************************************************************
+
+31. Faça um algoritmo que receba o peso de uma pessoa, calcule e mostre:
+a) o novo peso se a pessoa engordar 15% sobre o peso digitado;
+b) o novo peso se a pessoa emagrecer 20% sobre o peso digitado. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float engordar (float peso) {
+    
+    float guloso = peso * 1.15f;
+    return guloso;
+}
+
+float emagrecer (float peso) {
+    
+    float penitente = peso * 0.8f;
+    return penitente;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(engordar(82.5f), 94.87f));
+    printf("%d\n", floatcmp(emagrecer(82.5f), 66.00f));
+    printf("\n");
+    printf("%d\n", floatcmp(engordar(98.51f), 113.28f));
+    printf("%d\n", floatcmp(emagrecer(98.51f), 78.80f));
+    printf("\n");
+    printf("%d\n", floatcmp(engordar(64.72f), 74.42f));
+    printf("%d\n", floatcmp(emagrecer(64.72f), 51.77f));
+    printf("\n");
+    printf("%d\n", floatcmp(engordar(105.56f), 121.39f));
+    printf("%d\n", floatcmp(emagrecer(105.56f), 84.44f));
+    
+    return 0;
+}
