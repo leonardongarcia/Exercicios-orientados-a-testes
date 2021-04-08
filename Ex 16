@@ -9,37 +9,37 @@ quilos) de queijo, presunto e carne necessários para compra.
 *******************************************************************************/
 #include <stdio.h>
 
-float calcularQuei (float qtdPao) {
+float calcularQueijo (float quantidadePao) {
     
-    float qtdQuei = qtdPao * 0.05f;
-    return qtdQuei;
+    float quantidadeQueijo = quantidadePao * 0.05f;
+    return quantidadeQueijo;
 }
 
-float calcularPres (float qtdPao) {
+float calcularPresunto (float quantidadePao) {
     
-    float qtdPres = qtdPao * 0.05f;
-    return qtdPres;
+    float quantidadePresunto = quantidadePao * 0.05f;
+    return quantidadePresunto;
 }
 
-float calcularHamb (float qtdPao) {
+float calcularHamburguer (float quantidadePao) {
     
-    float qtdHamb = qtdPao * 0.1f;
-    return qtdHamb;
+    float quantidadeHamburguer = quantidadePao * 0.1f;
+    return quantidadeHamburguer;
 }
 
 int main() {
     
-    printf("%d\n", calcularQuei (10) == 0.5f);
-    printf("%d\n", calcularPres (10) == 0.5f);
-    printf("%d\n", calcularHamb (10) == 1.0f);
+    printf("%d\n", calcularQueijo (10) == 0.5f);
+    printf("%d\n", calcularPresunto (10) == 0.5f);
+    printf("%d\n", calcularHamburguer(10) == 1.0f);
     printf("\n");
-    printf("%d\n", calcularQuei (1054) == 52.70f);
-    printf("%d\n", calcularPres (1054) == 52.70f);
-    printf("%d\n", calcularHamb (1054) == 105.4f);
+    printf("%d\n", calcularQueijo (1054) == 52.70f);
+    printf("%d\n", calcularPresunto (1054) == 52.70f);
+    printf("%d\n", calcularHamburguer (1054) == 105.4f);
     printf("\n");
-    printf("%d\n", calcularQuei (10521) == 526.05f);
-    printf("%d\n", calcularPres (10521) == 526.05f);
-    printf("%d\n", calcularHamb (10521) == 1052.1f);
+    printf("%d\n", calcularQueijo (10521) == 526.05f);
+    printf("%d\n", calcularPresunto (10521) == 526.05f);
+    printf("%d\n", calcularHamburguer (10521) == 1052.1f);
     return 0;
 }
 
