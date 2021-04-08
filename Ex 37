@@ -1,0 +1,99 @@
+/******************************************************************************
+
+37. Faça um algoritmo que calcule e mostre a tabuada de um número digitado pelo usuário. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+float calcularTabuada0(float num1) {
+    
+    float tabuada = num1 * 0;
+    return tabuada;
+}
+
+float calcularTabuada1(float num1) {
+    
+    float tabuada = num1 * 1;
+    return tabuada;
+}
+
+float calcularTabuada2(float num1) {
+    
+    float tabuada = num1 * 2;
+    return tabuada;
+}
+
+float calcularTabuada3(float num1) {
+    
+    float tabuada = num1 * 3;
+    return tabuada;
+}
+
+float calcularTabuada4(float num1) {
+    
+    float tabuada = num1 * 4;
+    return tabuada;
+}
+
+float calcularTabuada5(float num1) {
+    
+    float tabuada = num1 * 5;
+    return tabuada;
+}
+
+float calcularTabuada6(float num1) {
+    
+    float tabuada = num1 * 6;
+    return tabuada;
+}
+
+float calcularTabuada7(float num1) {
+    
+    float tabuada = num1 * 7;
+    return tabuada;
+}
+
+float calcularTabuada8(float num1) {
+    
+    float tabuada = num1 * 8;
+    return tabuada;
+}
+
+float calcularTabuada9(float num1) {
+    
+    float tabuada = num1 * 9;
+    return tabuada;
+}
+
+float calcularTabuada10(float num1) {
+    
+    float tabuada = num1 * 10;
+    return tabuada;
+}
+int main() {
+    
+    printf("%d\n", calcularTabuada0(1) == 0);
+    printf("%d\n", calcularTabuada1(1) == 1);
+    printf("%d\n", calcularTabuada2(1) == 2);
+    printf("%d\n", calcularTabuada3(1) == 3);
+    printf("%d\n", calcularTabuada4(1) == 4);
+    printf("%d\n", calcularTabuada5(1) == 5);
+    printf("%d\n", calcularTabuada6(1) == 6);
+    printf("%d\n", calcularTabuada7(1) == 7);
+    printf("%d\n", calcularTabuada8(1) == 8);
+    printf("%d\n", calcularTabuada9(1) == 9);
+    printf("%d\n", calcularTabuada10(1) == 10);
+    printf("\n");
+    printf("%d\n", calcularTabuada0(7) == 0);
+    printf("%d\n", calcularTabuada1(7) == 7);
+    printf("%d\n", calcularTabuada2(7) == 14);
+    printf("%d\n", calcularTabuada3(7) == 21);
+    printf("%d\n", calcularTabuada4(7) == 28);
+    printf("%d\n", calcularTabuada5(7) == 35);
+    printf("%d\n", calcularTabuada6(7) == 42);
+    printf("%d\n", calcularTabuada7(7) == 49);
+    printf("%d\n", calcularTabuada8(7) == 56);
+    printf("%d\n", calcularTabuada9(7) == 63);
+    printf("%d\n", calcularTabuada10(7) == 70);
+    return 0;
+}
