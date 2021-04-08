@@ -1,0 +1,25 @@
+/******************************************************************************
+
+40. Faça um algoritmo que receba o valor dos catetos de um triângulo, calcule e mostre o valor da
+hipotenusa. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int floatcmp(float a, float b){
+    return fabs(a - b) < 0.009f;
+}
+
+float calcularHipotenusa (float cateto1, float cateto2) {
+    
+    float hipotenusa = sqrt(pow(cateto1, 2) + pow(cateto2, 2));
+    return hipotenusa;
+}
+
+int main() {
+    
+    printf("%d\n", floatcmp(calcularHipotenusa (6, 8), 10));
+    printf("%d\n", floatcmp(calcularHipotenusa (15.5f, 29.5), 33.32f));
+    return 0;
+}
