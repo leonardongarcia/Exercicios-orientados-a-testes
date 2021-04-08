@@ -15,6 +15,7 @@ int floatcmp(float a, float b){
 float calcularRestoSalario(float salario, float conta1, float conta2) {
     
     float restoSalario = salario - ((conta1 * 1.02f) + (conta2 * 1.02f));
+    return restoSalario;
 }
 
 int main() {
